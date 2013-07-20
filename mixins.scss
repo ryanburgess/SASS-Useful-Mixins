@@ -1,0 +1,90 @@
+@mixin circle($size, $color) {
+  background: $color;
+  -webkit-border-radius: $size;
+     -moz-border-radius: $size;
+          border-radius: $size;
+}
+@mixin roundedTop($size, $color){
+	background:$color;
+	-moz-border-radius: $size $size 0 0;
+	-webkit-border-radius: $size $size 0 0;
+	border-radius:$size $size 0 0;
+}
+@mixin roundedCorners($size){
+	-moz-border-radius: $size;
+	-webkit-border-radius: $size;
+	border-radius:$size;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin rem($property, $values...) {
+	$n: length($values);
+  	$i: 1;
+
+  	$pxlist: ();
+  	$remlist: ();
+
+  	@while $i <= $n {
+		$itemVal: (nth($values, $i));
+		@if $itemVal != "auto"{
+			$pxlist: append($pxlist, $itemVal + px);
+	    	$remlist: append($remlist, ($itemVal / 10) + rem);
+		}@else{
+			$pxlist: append($pxlist, auto);
+			$remlist: append($remlist, auto);
+		}
+ 		
+	
+    	$i: $i + 1;
+  	}
+
+  	#{$property}: $pxlist;
+  	#{$property}: $remlist;
+}
+
+@mixin arrow($direction, $color, $size){
+	$pxSize: $size +px;
+	$remSize: ($size /10)+rem;
+	
+	#{width}: 0;
+  	#{height}: 0;
+	
+	@if $direction == "left"{
+		border-top: $pxSize solid transparent;
+		border-right: $pxSize solid $color;
+		border-bottom: $pxSize solid transparent;
+		
+		border-top: $remSize solid transparent;
+		border-right: $remSize solid $color;
+		border-bottom: $remSize solid transparent;
+	}@else if $direction == "right"{
+		border-top: $pxSize solid transparent;
+		border-bottom: $pxSize solid transparent;
+		border-left: $pxSize solid $color;
+		
+		border-top: $remSize solid transparent;
+		border-bottom: $remSize solid transparent;
+		border-left: $remSize solid $color;
+	}@else if $direction == "up"{
+		border-left: $pxSize solid transparent;
+		border-right: $pxSize solid transparent;
+		border-bottom: $pxSize solid $color;
+		
+		border-left: $remSize solid transparent;
+		border-right: $remSize solid transparent;
+		border-bottom: $remSize solid $color;
+	}@else if $direction == "down"{
+		border-left: $pxSize solid transparent;
+		border-right: $pxSize solid transparent;
+		border-top: $pxSize solid $color;
+		
+		border-left: $remSize solid transparent;
+		border-right: $remSize solid transparent;
+		border-top: $remSize solid $color;
+	}
+		
+}
