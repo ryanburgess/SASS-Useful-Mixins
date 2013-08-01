@@ -1,29 +1,34 @@
-@mixin circle($size, $color) {
-  background: $color;
-  -webkit-border-radius: $size + px;
-     -moz-border-radius: $size + px;
-          border-radius: $size + px;
+//Helpful mixins
+//Ryan Burgess
 
-  -webkit-border-radius: $size /10 + rem;
-     -moz-border-radius: $size /10 + rem;
-          border-radius: $size /10 + rem;    
+/* -----------------------------------------
+
+	Linear Gradients
+	
+ -------------------------------------------*/
+
+ // example: @include linearGradient(#cccccc, #333333);
+
+@mixin linearGradient($top, $bottom){
+	background: $top; /* Old browsers */
+	background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
-@mixin roundedTop($size, $color){
-	background:$color;
-	-moz-border-radius: $size $size 0 0;
-	-webkit-border-radius: $size $size 0 0;
-	border-radius:$size $size 0 0;
-}
-@mixin roundedCorners($size){
-	-moz-border-radius: $size;
-	-webkit-border-radius: $size;
-	border-radius:$size;
-}
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
-}
+
+/* -----------------------------------------
+
+	REM Units with PX fallback
+
+ -------------------------------------------*/
+
+ // example: @include rem("margin", 10, 5, 10, 5);
+ // example: @include rem("font-size", 14);
+
 @mixin rem($property, $values...) {
 	$n: length($values);
   	$i: 1;
@@ -49,16 +54,63 @@
   	#{$property}: $remlist;
 }
 
-@mixin linearGradient($top, $bottom){
-	background: $top; /* Old browsers */
-	background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+/* -----------------------------------------
+
+	Retina Images
+	
+ -------------------------------------------*/
+
+// example: @include image-2x("logo2x.png", 100, 50);
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    background-image: url($image);
+    background-size: $width + px $height + px;
+    background-size: $width / 10 + rem $height / 10 + rem;
+  }
 }
+
+
+/* -----------------------------------------
+
+	Rounded Corners
+	
+ -------------------------------------------*/
+
+ // example: @include roundedCorners(10);
+
+@mixin roundedCorners($size){
+  	-webkit-border-radius: $size + px;
+     	-moz-border-radius: $size + px;
+          	border-radius: $size + px;  
+}
+
+// Rounded Corners Top Only
+@mixin roundedTop($size){
+	-moz-border-radius: $size + px $size + px 0 0;
+	-webkit-border-radius: $size + px $size + px 0 0;
+	border-radius:$size $size + px 0 0;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/* -----------------------------------------
+
+	Arrows / Triangles
+
+ -------------------------------------------*/
+
+ // example: @include arrow("left", #cccccc, 10);
 
 @mixin arrow($direction, $color, $size){
 	$pxSize: $size +px;
@@ -101,4 +153,26 @@
 		border-top: $remSize solid $color;
 	}
 		
+}
+
+/* -----------------------------------------
+
+	Clearfix after element
+
+ -------------------------------------------*/
+
+ // example: @include clearfix();
+
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
