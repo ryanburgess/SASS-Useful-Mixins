@@ -1,5 +1,4 @@
 //Helpful mixins
-//Ryan Burgess
 
 /* -----------------------------------------
 
@@ -176,3 +175,17 @@
         clear: both;
     }
 }
+
+/* -----------------------------------------
+
+	Hide Elements
+
+ -------------------------------------------*/
+
+ // example: @include hide();
+
+ @mixin hide() {
+ 	position:relative;
+    text-indent:-99999px;
+   	height:1px;
+ }
