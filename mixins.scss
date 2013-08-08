@@ -105,7 +105,42 @@
 @mixin roundedTop($size){
 	-moz-border-radius: $size + px $size + px 0 0;
 	-webkit-border-radius: $size + px $size + px 0 0;
-	border-radius:$size $size + px 0 0;
+	border-radius:$size + px $size + px 0 0;
+}
+
+// Rounded Corner Top Left Only
+@mixin roundedTopLeft($size){
+	-moz-border-radius: $size + px 0 0 0;
+	-webkit-border-radius: $size + px 0 0 0;
+	border-radius:$size + px 0 0 0;
+}
+
+// Rounded Corner Top Right Only
+@mixin roundedTopRight($size){
+	-moz-border-radius: 0 $size + px 0 0;
+	-webkit-border-radius:0 $size + px 0 0;
+	border-radius:0 $size + px 0 0;
+}
+
+// Rounded Corners Bottom Only
+@mixin roundedBottom($size){
+	-moz-border-radius: 0 0 $size + px $size + px;
+	-webkit-border-radius: 0 0 $size + px $size + px;
+	border-radius: 0 0 $size + px $size + px;
+}
+
+// Rounded Corner Bottom Left Only
+@mixin roundedBottomLeft($size){
+	-moz-border-radius: 0 0 0 $size + px;
+	-webkit-border-radius: 0 0 0 $size + px;
+	border-radius: 0 0 0 $size + px;
+}
+
+// Rounded Corner Bottom Right Only
+@mixin roundedBottomRight($size){
+	-moz-border-radius: 0 0  $size + px 0;
+	-webkit-border-radius: 0 0 $size + px 0;
+	border-radius: 0 0 $size + px 0;
 }
 
 // Opacity
