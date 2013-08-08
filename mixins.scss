@@ -16,7 +16,7 @@
 	background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom',GradientType=0 ); /* IE6-9 */
 }
 
 // -----------------------------------------
@@ -72,6 +72,19 @@
     background-size: $width / 10 + rem $height / 10 + rem;
   }
 }
+
+// -----------------------------------------
+
+	// Media Query Breakpoints
+	
+// -------------------------------------------
+
+// example @include breakpoint(940){ width:80%; }
+
+@mixin breakpoint($size) {
+	@media only screen and (max-width : $size + px) { @content; }
+}
+
 
 
 // -----------------------------------------
