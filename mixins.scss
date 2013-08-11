@@ -59,9 +59,9 @@
 	
  // -------------------------------------------
 
-// example: @include image-2x("logo2x.png", 100, 50);
+// example: @include retina("logo2x.png", 100, 50);
 
-@mixin image-2x($image, $width, $height) {
+@mixin retina($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),
          (-o-min-device-pixel-ratio: 2.6/2),
          (-webkit-min-device-pixel-ratio: 1.3),
