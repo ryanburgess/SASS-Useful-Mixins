@@ -143,7 +143,26 @@
 	border-radius: 0 0 $size + px 0;
 }
 
-// Opacity
+// Rounded Corners Left Only
+@mixin roundedLeft($size){
+	-moz-border-radius: 0 0 $size + px $size + px;
+	-webkit-border-radius: 0 0 $size + px $size + px;
+	border-radius: $size + px 0 0 $size + px;
+}
+
+// Rounded Corners Right Only
+@mixin roundedRight($size){
+	-moz-border-radius: 0 $size + px $size + px 0;
+	-webkit-border-radius: 0 $size + px $size + px 0;
+	border-radius: 0 $size + px $size + px 0;
+}
+
+// -----------------------------------------
+
+	// Opacity
+
+ // -------------------------------------------
+
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
