@@ -85,6 +85,10 @@
 	@media only screen and (max-width : $size + px) { @content; }
 }
 
+@mixin min-breakpoint($size) {
+	@media only screen and (min-width : $size + px) { @content; }
+}
+
 
 
 // -----------------------------------------
@@ -220,6 +224,27 @@
 	}
 		
 }
+
+// -----------------------------------------
+
+	// Text Shadow
+
+// -------------------------------------------
+
+ // example: @include single-text-shadow(1px, 2px, 2px, #000);
+
+ @mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+ 	text-shadow:$hoff $voff $blur $color;
+ }
+
+
+// example: @include inner-shadow(1px, 2px, 2px, #000);
+
+ @mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+ 	-moz-box-shadow:    inset $hoff $voff $blur $color;
+    -webkit-box-shadow: inset $hoff $voff $blur $color;
+    box-shadow:         inset $hoff $voff $blur $color;
+ }
 
 // -----------------------------------------
 
