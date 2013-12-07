@@ -261,6 +261,63 @@
 
 // -----------------------------------------
 
+	// Display inline block cross browser
+
+// -------------------------------------------
+
+// example: @include inline-block();
+
+ @mixin inline-block() {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+}
+
+// -----------------------------------------
+
+	// Replace text
+
+// -------------------------------------------
+
+// example: @include replace-text();
+
+@mixin replace-text() {
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// -----------------------------------------
+
+	// Change placeholder text color
+
+// -------------------------------------------
+
+// example: @include placeholder-color(#333);
+
+@mixin placeholder-color($color){
+  &.placeholder{
+    color: $color
+  }
+
+  &:-moz-placeholder{
+    color: $color
+  }
+    
+  &::-webkit-input-placeholder{
+    color: $color
+  }
+
+  &:-ms-input-placeholder{
+    color: $color
+  }
+}
+
+// -----------------------------------------
+
 //	Box Model
 
 // -------------------------------------------
