@@ -246,18 +246,18 @@
 
  // example: @include single-text-shadow(1px, 2px, 2px, #000);
 
- @mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+@mixin single-text-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
  	text-shadow:$hoff $voff $blur $color;
- }
+}
 
 
 // example: @include inner-shadow(1px, 2px, 2px, #000);
 
- @mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
+@mixin inner-shadow($hoff: false, $voff: false, $blur: false, $color: false) {
  	-moz-box-shadow:    inset $hoff $voff $blur $color;
     -webkit-box-shadow: inset $hoff $voff $blur $color;
     box-shadow:         inset $hoff $voff $blur $color;
- }
+}
 
 // -----------------------------------------
 
@@ -267,7 +267,7 @@
 
 // example: @include inline-block();
 
- @mixin inline-block() {
+@mixin inline-block() {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
