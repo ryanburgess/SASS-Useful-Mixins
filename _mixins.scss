@@ -404,3 +404,20 @@
 	-o-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
 	transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
 }
+
+// -----------------------------------------
+
+	// IE 7 Fix for using :before or :after pseudo elements
+
+// -------------------------------------------
+
+// example: @include pseudo-fix(before)
+// example: @include pseudo-fix(after)
+
+@mixin pseudo-fix($pseudo){
+	*zoom: expression( 
+	  this.runtimeStyle.zoom="1",
+	  this.appendChild( document.createElement("small") ).className=$pseudo
+	 );
+}
+
