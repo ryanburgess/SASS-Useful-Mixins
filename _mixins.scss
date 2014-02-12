@@ -407,6 +407,50 @@
 	transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
 }
 
+
+// -----------------------------------------
+
+	// Keyframes
+
+// -------------------------------------------
+
+// example: @include keyframes(slide-down){0%{ opacity:1; } 90%{ opacity:0; }}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+// -----------------------------------------
+
+	// Animations
+
+// -------------------------------------------
+
+// example: @include animation('slide-down 5s 3');
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+
 // -----------------------------------------
 
 	// IE 7 Fix for using :before or :after pseudo elements
