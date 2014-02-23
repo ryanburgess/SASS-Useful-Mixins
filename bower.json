@@ -1,0 +1,17 @@
+{
+    "name": "UsefulMixins",
+    "version": "0.1",
+    "main": "_mixins.scss",
+    "ignore": [
+        "source",
+        "spec",
+        ".bowerrc",
+        ".gitignore",
+        ".jshintignore",
+        ".jshintrc",
+        "bower.json",
+        "gruntfile.js",
+        "package.json",
+        "README.md"
+    ]
+}
