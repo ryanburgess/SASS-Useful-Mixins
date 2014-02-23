@@ -13,5 +13,13 @@
         "gruntfile.js",
         "package.json",
         "README.md"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/ryanburgess/SASS-Useful-Mixins.git"
+    },
+    "authors": [
+      "Ryan Burgess", "Ryan Burgess",
+      "Ryan Burgess <github.com/ryanburgess> (http://github.com/ryanburgess)"
     ]
 }
