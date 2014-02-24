@@ -21,4 +21,5 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.registerTask('default',['watch']);
+	grunt.loadNpmTasks('grunt-bump');
 }
