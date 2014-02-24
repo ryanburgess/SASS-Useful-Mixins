@@ -492,10 +492,15 @@
 
 		$i: $i + 1;
   	}
-
-  	-webkit-transform-#{$type}: $originVal;
-	   -moz-transform-#{$type}: $originVal;
-	        transform-#{$type}: $originVal;
+  	@if $type == "rotate" or $type == "rotateY" or $type == "rotateX"{
+	  	-webkit-transform: #{$type}($originVal);
+		   -moz-transform: #{$type}($originVal);
+		        transform: #{$type}($originVal);
+    }@else{
+		-webkit-transform-#{$type}: $originVal;
+		   -moz-transform-#{$type}: $originVal;
+		        transform-#{$type}: $originVal;
+	}
 }
 
 
