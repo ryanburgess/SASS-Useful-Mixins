@@ -1,12 +1,11 @@
 {
   "name": "Examples",
-  "version": "0.3",
+  "version": "0.0.4",
   "description": "Grunt for all example projects",
   "repository": "examples",
   "author": "Ryan Burgess",
   "devDependencies": {
     "grunt": "~0.4.2",
-    "grunt-contrib-watch": "~0.5.3",
     "grunt-bump": "0.0.13"
   }
 }
