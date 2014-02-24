@@ -1,25 +1,18 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		bump: {  
-		    scripts: {
-		        files: ["*.js", "*.js"],
-		        updateConfigs: ["pkg"],
-		        commitFiles: ["-a"],
-		        push: false
-		    }
-		},
-		watch: {
-			css: {
-				files: 'source/**/*.scss',
-				tasks: ['bump'],
-				options: { 
-					spawn: false,
-					livereload: true 
-				},
-			}
+		bump: {
+		  options: {
+		  	files: ['package.json', 'bower.json'],
+		    updateConfigs: [],
+		    commit: true,
+		    commitMessage: 'Release v%VERSION%',
+		    commitFiles: ['package.json'], // '-a' for all files
+		    createTag: true,
+		    tagName: 'v%VERSION%',
+		    tagMessage: 'Version %VERSION%'
+		  }
 		}
 	});
-	grunt.registerTask('default',['watch']);
 	grunt.loadNpmTasks('grunt-bump');
 }
