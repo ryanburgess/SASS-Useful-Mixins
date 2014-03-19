@@ -203,8 +203,8 @@
 	$pxSize: $size + px;
 	$remSize: ($size / 10) + rem;
 
-	#{width}: 0;
-	#{height}: 0;
+	width: 0;
+	height: 0;
 
 	@if $direction == "left"{
 		border-top: $pxSize solid transparent;
