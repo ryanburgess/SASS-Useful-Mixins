@@ -20,6 +20,7 @@
 	background:     -ms-linear-gradient(top, $top 0, $bottom 100%); /* IE10+ */
 	background:         linear-gradient(to bottom, $top 0, $bottom 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top', endColorstr='$bottom', GradientType=0 ); /* IE6-9 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}')";
 }
 
 // -----------------------------------------
