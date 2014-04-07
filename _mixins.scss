@@ -519,3 +519,18 @@
 	   -moz-backface-visibility: $value;
 			backface-visibility: $value;
 }
+
+// -----------------------------------------
+
+	// Background cover
+
+// -------------------------------------------
+
+// example: @include background-cover();
+
+@mixin background-cover(){
+	-webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
