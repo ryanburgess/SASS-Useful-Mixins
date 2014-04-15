@@ -297,6 +297,33 @@
 
 // -----------------------------------------
 
+	// Single Transform
+
+// -------------------------------------------
+
+// example: @include flat-button($greyBlue, white, 5px 15px);
+
+@mixin single-transform($deg) {
+	-ms-transform:rotate($deg);
+	-webkit-transform:rotate($deg);
+	transform:rotate($deg);
+}
+
+// -----------------------------------------
+
+	// Margin auto
+
+// -------------------------------------------
+
+// example: @include margin-auto();
+
+@mixin margin-auto() {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+// -----------------------------------------
+
 	// Change placeholder text color
 
 // -------------------------------------------
@@ -419,19 +446,19 @@
 // example: @include keyframes(slide-down) {0%{ opacity:1; } 90%{ opacity:0; }}
 
 @mixin keyframes($animation-name) {
-	@-webkit-keyframes $animation-name; {
+	@-webkit-keyframes #{$animation-name} {
 		@content;
 	}
-	@-moz-keyframes $animation-name; {
+	@-moz-keyframes #{$animation-name} {
 		@content;
 	}
-	@-ms-keyframes $animation-name; {
+	@-ms-keyframes #{$animation-name} {
 		@content;
 	}
-	@-o-keyframes $animation-name; {
+	@-o-keyframes #{$animation-name} {
 		@content;
 	}
-	@keyframes $animation-name; {
+	@keyframes #{$animation-name} {
 		@content;
 	}
 }
