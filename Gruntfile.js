@@ -12,7 +12,8 @@ module.exports = function(grunt) {
 				tagName: 'v%VERSION%',
 				tagMessage: 'Version %VERSION%',
 				commitFiles: ["-a"],
-				push: true
+				push: true,
+				pushTo: 'upstream',
 			}
 		}
 	});
