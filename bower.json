@@ -1,6 +1,6 @@
 {
     "name": "UsefulMixins",
-    "version": "0.0.7",
+    "version": "0.0.10",
     "main": "_mixins.scss",
     "ignore": [
         "source",
