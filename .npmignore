@@ -1,0 +1,11 @@
+.DS_Store
+~*
+*.bak
+*.tmp
+.sass-cache
+*.log
+node_modules/
+Gruntfile.js
+package.json
+README.md
+bower.json
