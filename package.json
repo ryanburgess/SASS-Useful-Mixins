@@ -15,14 +15,7 @@
     "url": "https://github.com/ryanburgess/SASS-Useful-Mixins/issues"
   },
   "homepage": "https://github.com/ryanburgess/SASS-Useful-Mixins",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "grunt": "~0.4.2",
-    "grunt-bump": "~0.0.13"
-  },
-  "scripts": {
-    "test": "test"
-  },
+  "main": "_mixins.scss",
   "keywords": [
     "sass",
     "mixins",
