@@ -374,9 +374,9 @@
 
 	// Clearfix after element
 
- // -------------------------------------------
+// -------------------------------------------
 
- // example: @include clearfix();
+// example: @include clearfix();
 
 @mixin clearfix() {
 	& {
@@ -396,9 +396,9 @@
 
 	// Hide Elements
 
- // -------------------------------------------
+// -------------------------------------------
 
- // example: @include hide-text();
+// example: @include hide-text();
 
 @mixin hide-text() {
 	position: relative;
@@ -445,7 +445,6 @@
 		 -o-transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
 			transition: $property1 $duration1 $timing-function1 $delay1, $property2 $duration2 $timing-function2 $delay2;
 }
-
 
 // -----------------------------------------
 
@@ -523,7 +522,6 @@
 				transform-#{$type}: $originVal;
 	}
 }
-
 
 // -----------------------------------------
 
