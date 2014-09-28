@@ -4,10 +4,10 @@ Useful SASS Mixins
 If you're using SASS you should find these mixins really helpful. These mixins should help speed up your development process. The file includes SASS mixins for REM unit fallback support, Retina Images, Breakpoints, Animations, Transitions, Linear Gradients, Rounded Corners, Opacity, Clearfix, Hide text, Triangles/Arrows and more.
 
 ## Install
-### npm
+#### npm
     npm install SASS-Useful-Mixins
 
-### Bower
+#### Bower
     bower install UsefulMixins
 
 ## Contributing
