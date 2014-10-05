@@ -7,9 +7,9 @@
     "url": "https://github.com/ryanburgess/SASS-Useful-Mixins.git"
   },
   "author": "Ryan Burgess",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-bump": "0.0.13"
+  "preferGlobal": "true",
+  "bin":  {
+    "evernote-sass": "./sass-useful-mixins.sh"
   },
   "bugs": {
     "url": "https://github.com/ryanburgess/SASS-Useful-Mixins/issues"
