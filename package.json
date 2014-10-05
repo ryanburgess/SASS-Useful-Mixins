@@ -1,10 +1,10 @@
 {
-  "name": "SASS-Useful-Mixins",
-  "version": "0.0.9",
+  "name": "sass-useful-mixins",
+  "version": "0.1.0",
   "description": "Useful Mixins for SASS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanburgess/SASS-Useful-Mixins"
+    "url": "https://github.com/ryanburgess/SASS-Useful-Mixins.git"
   },
   "author": "Ryan Burgess",
   "devDependencies": {
