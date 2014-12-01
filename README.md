@@ -10,6 +10,10 @@ If you're using SASS you should find these mixins really helpful. These mixins s
 #### Bower
     bower install UsefulMixins
 
+## Release History
+* 0.1.2: add release history notes.
+* 0.1.0: Initial release.
+
 ## Contributing
 
 1. Fork it
