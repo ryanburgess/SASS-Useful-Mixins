@@ -11,6 +11,7 @@ If you're using SASS you should find these mixins really helpful. These mixins s
     bower install UsefulMixins
 
 ## Release History
+* 0.1.4: added animated link mixin
 * 0.1.3: Update transform mixin.
 * 0.1.2: add release history notes.
 * 0.1.0: Initial release.
