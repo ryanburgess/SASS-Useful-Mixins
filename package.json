@@ -1,6 +1,6 @@
 {
   "name": "sass-useful-mixins",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Useful Mixins for SASS",
   "repository": {
     "type": "git",
@@ -8,8 +8,10 @@
   },
   "author": "Ryan Burgess",
   "preferGlobal": "true",
-  "bin":  {
-    "evernote-sass": "./sass-useful-mixins.sh"
+  "main": "bin/useful-mixins",
+  "preferGlobal": true,
+  "bin": {
+    "useful-mixins": "./bin/useful-mixins"
   },
   "bugs": {
     "url": "https://github.com/ryanburgess/SASS-Useful-Mixins/issues"
@@ -20,7 +22,9 @@
     "sass",
     "mixins",
     "scss",
-    "css"
+    "css",
+    "web",
+    "front-end"
   ],
   "license": "MIT"
 }

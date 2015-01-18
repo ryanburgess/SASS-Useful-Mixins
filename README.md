@@ -5,12 +5,13 @@ If you're using SASS you should find these mixins really helpful. These mixins s
 
 ## Install
 #### npm
-    npm install SASS-Useful-Mixins
+    npm install SASS-Useful-Mixins -g
 
-#### Bower
-    bower install UsefulMixins
+## Use
+Run ```useful-mixins``` in a directory where you'd like to use the Sass Useful Mixins.
 
 ## Release History
+* 0.1.5: added generator script
 * 0.1.4: added animated link mixin
 * 0.1.3: Update transform mixin.
 * 0.1.2: add release history notes.
