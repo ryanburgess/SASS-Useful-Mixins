@@ -25,7 +25,6 @@
     "path": "^0.11.14"
   },
   "homepage": "https://github.com/ryanburgess/SASS-Useful-Mixins",
-  "main": "_mixins.scss",
   "keywords": [
     "sass",
     "mixins",
