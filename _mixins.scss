@@ -3,11 +3,11 @@
 // by Ryan Burgess
 // https://github.com/ryanburgess/SASS-Useful-Mixins
 
-// -----------------------------------------
+// --------------------------------------------
 
 	// Linear Gradients
 
- // -------------------------------------------
+// -------------------------------------------
 
  // example: @include linearGradient(#cccccc, #333333);
 
@@ -428,11 +428,11 @@
 // example: @include translate(0);
 
 @mixin translate($value) {
-	-webkit-transform: translatez($value);
-	   -moz-transform: translatez($value);
-		-ms-transform: translatez($value);
-		 -o-transform: translatez($value);
-			transform: translatez($value);
+  -webkit-transform: translatez($value);
+     -moz-transform: translatez($value);
+      -ms-transform: translatez($value);
+       -o-transform: translatez($value);
+          transform: translatez($value);
 }
 
 // -------------------------------------------
