@@ -7,9 +7,8 @@
     "url": "https://github.com/ryanburgess/SASS-Useful-Mixins.git"
   },
   "author": "Ryan Burgess",
-  "preferGlobal": "true",
-  "main": "bin/useful-mixins",
   "preferGlobal": true,
+  "main": "bin/useful-mixins",
   "bin": {
     "useful-mixins": "./bin/useful-mixins"
   },
@@ -33,5 +32,9 @@
     "web",
     "front-end"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sassyclean": "^0.1.3"
+  }
 }

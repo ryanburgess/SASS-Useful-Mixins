@@ -14,7 +14,16 @@ module.exports = function(grunt) {
 				commitFiles: ["-a"],
 				push: false
 			}
-		}
+		},
+		sassyclean: {
+	    options: {
+	      modules: ['mixins/**/*.scss'],
+	      buildfiles: ['mixins/_base.scss'],
+	      remove: false,
+	      days: null
+	    }
+	  }
 	});
+	grunt.loadNpmTasks('grunt-sassyclean');
 	grunt.loadNpmTasks('grunt-bump');
 }
