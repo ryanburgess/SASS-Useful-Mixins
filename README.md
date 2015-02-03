@@ -11,7 +11,8 @@ If you're using SASS you should find these mixins really helpful. These mixins s
 Run ```useful-mixins``` in a directory where you'd like to use the Sass Useful Mixins.
 
 ## Release History
-* 0.1.8: fixe output in generator script
+* 0.1.9: generate the mixins directory
+* 0.1.8: fix output in generator script
 * 0.1.7: fixes with generator script
 * 0.1.6: add dependencies
 * 0.1.5: added generator script

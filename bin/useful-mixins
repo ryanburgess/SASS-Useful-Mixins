@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 var mkdirp    = require('mkdirp'),
-  fs          = require('fs'),
+  fs          = require('fs-extra'),
   path        = require('path'),
   pkg         = require('../package.json'),
   version     = pkg.version,
   dir         = path.dirname();
+
+// copy the mixins directory and create a new mixins directory
+fs.copy(path.join(__dirname, '../mixins'), dir + '/mixins', function(err) {
+  if (err) {
+    return console.log(err);
+  }
+});
 
 // create mixins
 fs.readFile(path.join(__dirname, '../_mixins.scss'), 'utf8', function (err,data) {
