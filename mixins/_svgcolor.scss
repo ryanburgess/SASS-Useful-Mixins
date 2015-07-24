@@ -1,0 +1,29 @@
+//------ SASS Useful Mixins ---------------------------------------------
+
+// by Ryan Burgess
+// https://github.com/ryanburgess/SASS-Useful-Mixins
+// MIT © Ryan Burgess
+
+// ----------------------------------------------------------------------
+
+  // An SVG color Mixin
+  //
+  // Credit: @thisisroyal (https://twitter.com/thisisroyal)
+
+// ----------------------------------------------------------------------
+
+// example: @include sgvcolor(#51ebca);
+
+@mixin svgcolor($color: #000) {
+
+  [fill]:not([fill="none"]) {
+    fill: $color;
+    transition: fill 150ms ease-in-out;
+  }
+
+  [stroke]:not([stroke="none"]) {
+    stroke: $color;
+    transition: stroke 150ms ease-in-out;
+  }
+
+}
